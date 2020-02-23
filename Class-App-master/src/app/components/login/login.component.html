@@ -1,0 +1,38 @@
+<!-- Barra de navegacion -->
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm ProductSans">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Class-App</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <!-- <a class="p-2 text-dark" href="#">Features</a>
+        <a class="p-2 text-dark" href="#">Enterprise</a>
+        <a class="p-2 text-dark" href="#">Support</a>
+        <a class="p-2 text-dark" href="#">Pricing</a> -->
+    </nav>
+  
+</div>
+<!-- Barra de navegacion -->
+<!-- Contenedor general -->
+<div class="container-fluid mt-5 ProductSans">
+    <div class="row justify-content-center pt-5">
+        <div class="col-12 col-sm-11 col-md-11 col-lg-5 col-xl-7">
+            <h1 class="text-center text-dark mt-3 ">nuevo usuario</h1>
+            <form class="mt-4" [formGroup]="registerForm">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">User name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="userName">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="userEmail">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">phone</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" formControlName="userPassword">
+                </div>
+            </form>
+            <button class="btn btn-block btn-lg bg-dark text-white mt-4" [disabled]="registerForm.invalid" (click)="saveUser()" >Guardar</button>
+        </div>
+    </div>
+</div>
+<!-- Contenedor general -->

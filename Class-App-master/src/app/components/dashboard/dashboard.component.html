@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <th>Nombre</th>
+        <th>email</th>
+        <th>phone</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users" >
+            <td>{{user.userName}}</td>
+            <td>{{user.userEmail}}</td>
+            <td>{{user.userPassword}}</td>
+            <td><button (click)="edit(user)" routerLink="/edit" [queryParams]="user" >Editar</button></td>
+            <td><button (click)="delete(user.key)" >Eliminar</button></td>
+        </tr>
+    </tbody>
+</table>
